@@ -3,6 +3,9 @@ turnkey-foswiki-18.0 (1) turnkey; urgency=low
   * Install latest version of foswiki: 2.1.8
     [Anton Pyrogovskyi <anton@turnkeylinux.org>]
 
+  * Special thanks to UncleDan (Daniele Lolli - https://github.com/UncleDan)
+    for work on this (and many other v18.0 appliances).
+
   * Confconsole: bugfix broken DNS-01 Let's Encrypt challenge- closes #1876 &
     #1895.
     [Jeremy Davis <jeremy@turnkeylinux.org>]
