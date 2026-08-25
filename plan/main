@@ -2,6 +2,7 @@
 
 webmin-apache
 apache2
+apache2-utils
 
 // System requirements as per "Ubuntu and other Debian derived distributions"
 // http://foswiki.org/System/SystemRequirements
