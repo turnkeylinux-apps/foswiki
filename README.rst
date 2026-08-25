@@ -11,9 +11,10 @@ and on top of that:
 
 - Foswiki configurations:
    
-   - Installed from upstream source code to /var/www/foswiki.
-   - Configured cron jobs (daily maintenance, hourly stats, 15min
-     notifications).
+   - Foswiki 2.1.11 is installed from the official release archive to
+     /var/www/foswiki. The archive SHA-256 published in the upstream release
+     metadata is verified during the build.
+   - Configured nightly maintenance, notifications and statistics jobs.
    - Preconfigured mail settings.
 
      **Security note**: Updates to Foswiki may require supervision so
@@ -28,12 +29,12 @@ and on top of that:
   password recovery).
 - Webmin modules for configuring Apache2 and Postfix.
 
-WebMasterEmail is configured in */etc/foswiki/LocalSite.cfg*
+WebMasterEmail is configured in */var/www/foswiki/lib/LocalSite.cfg*
 
 Credentials *(passwords set at first boot)*
 -------------------------------------------
 
--  Webmin, Webshell, SSH: username **root**
+-  Webmin, SSH: username **root**
 -  Foswiki: username **admin**
 
 .. _Foswiki: https://foswiki.org

@@ -5,4 +5,4 @@
 
 [ -e $INITHOOKS_CONF ] && . $INITHOOKS_CONF 
 $INITHOOKS_PATH/bin/foswiki.py --pass="$APP_PASS" --email="$APP_EMAIL" --domain="$APP_DOMAIN"
-
+chown www-data:www-data /var/www/foswiki/data/.htpasswd

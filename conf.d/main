@@ -13,8 +13,7 @@ $CONFIG -noprompt # auto default config (writes config as root)
 $CONFIG -set {EnableEmail}='1' \
         -set {Email}{MailMethod}='MailProgram' \
         -set {MailProgram}='/usr/sbin/sendmail -t -oi -oeq' \
-        -set {SafeEnvPath}='/usr/local/bin:/usr/bin:/bin' \
-        -set {JQueryPlugin}{JQueryVersionForOldIEs}=''
+        -set {SafeEnvPath}='/usr/local/bin:/usr/bin:/bin'
 
 # ensure that configure.log is owned by www-data
 touch $WEBROOT/working/logs/configure.log
