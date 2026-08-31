@@ -1,3 +1,19 @@
+turnkey-foswiki-19.0 (1) turnkey; urgency=low
+
+  * Upgrade the appliance base to Debian 13 Trixie and Perl 5.40.
+
+  * Install the current Foswiki 2.1.11 security release and verify its
+    upstream release archive digest during the build.
+
+  * Generate the Foswiki configuration from the current release schema,
+    remove an obsolete jQuery setting and preserve web-server ownership of
+    the firstboot password file.
+
+  * Add nightly maintenance, notification and statistics jobs plus focused
+    runtime acceptance for administrator login and wiki topic persistence.
+
+ -- TurnKey GNU/Linux <admin@turnkeylinux.org>  Tue, 25 Aug 2026 05:55:00 +0000
+
 turnkey-foswiki-18.0 (1) turnkey; urgency=low
 
   * Install latest version of foswiki: 2.1.8

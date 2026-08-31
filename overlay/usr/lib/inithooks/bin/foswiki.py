@@ -10,7 +10,7 @@ Option:
 
 import sys
 import getopt
-from subprocess import check_output
+from subprocess import check_output, run
 
 from libinithooks import inithooks_cache
 from libinithooks.dialog_wrapper import Dialog
@@ -85,6 +85,8 @@ def main():
                   '-set', '{Password}=%s' % password,
                   '-set', '{WebMasterEmail}=%s' % email,
                   '-set', '{DefaultUrlHost}=%s' % domain])
+    run(['htpasswd', '-ci', '/var/www/foswiki/data/.htpasswd', 'admin'],
+        input=password + '\n', text=True, check=True)
 
 
 if __name__ == "__main__":

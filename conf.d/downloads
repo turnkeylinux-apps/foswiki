@@ -6,13 +6,11 @@ dl() {
 }
 
 SRC="/usr/local/src"
-
-TMP_FILE=$(mktemp)
-GH_API=https://api.github.com/repos/foswiki/distro/releases/latest
-curl -s $GH_API > $TMP_FILE
-LATEST_TAG=$(cat $TMP_FILE | grep -oP '"tag_name": "\K(.*)(?=")')
-LATEST_FILE="$(cat $TMP_FILE | grep -oP -m 1 '"name": "\K(.*)(?=")' | tr ' ' '-').tgz"
-rm -f $TMP_FILE
-URL="https://github.com/foswiki/distro/releases/download/$LATEST_TAG/$LATEST_FILE"
+VERSION=2.1.11
+TAG=FoswikiRelease02x01x11
+FILE=Foswiki-$VERSION.tgz
+SHA256=3a490eb460db4ca69d73dfe44c7984889552e5313eff60162760e80e66e5eba6
+URL="https://github.com/foswiki/distro/releases/download/$TAG/$FILE"
 
 dl $URL $SRC
+echo "$SHA256  $SRC/$FILE" | sha256sum --check
